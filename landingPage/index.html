@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Website - Versão Melhorada</title>
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="images/nintendo-switch.png" alt="Nintendo Switch Logo">
+            </a>
+            <nav class="menu">
+                <ul class="nav">
+                    <li><a href="#Videos">Vídeos</a></li>
+                    <li><a href="#Products">Produtos</a></li>
+                    <li><a href="https://www.nintendo.com/us/whatsnew/" target="_blank">Switch News</a></li>
+                    <li><a href="https://www.nintendo.com/pt-br/switch/online/" target="_blank">Switch Online</a></li>
+                    <li><a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/" target="_blank">Switch Classic</a></li>
+                </ul>
+            </nav>
+            <div class="login-section">
+                <button onclick="openLoginModal()">Login</button>
+                <input type="text" placeholder="Buscar...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrossel -->
+    <section class="carousel-section">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" onclick="openVideoModal('zelda')">
+                    <img src="images/The-Legend-of-Zelda-Breath-of-the-Wild.jpeg" alt="Zelda">
+                    <div class="slide-content">
+                        <h1>The Legend of Zelda: Echoes of Wisdom</h1>
+                        <p>Explore mundos incríveis e aventure-se com a princesa!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" onclick="openVideoModal('mario')">
+                    <img src="images/super_mario_odyssey_dinosaur_4k.jpeg" alt="Mario">
+                    <div class="slide-content">
+                        <h1>Super Mario Odyssey</h1>
+                        <p>Viaje pelo mundo mágico de Mario!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" onclick="openVideoModal('pokemon')">
+                    <img src="images/pokemon-legends-arceus.jpeg" alt="Pokemon">
+                    <div class="slide-content">
+                        <h1>Pokemon Legends Arceus</h1>
+                        <p>Prepare-se para uma aventura Pokémon épica!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" onclick="openVideoModal('metroid')">
+                    <img src="images/metroid.jpg" alt="Metroid Dread">
+                    <div class="slide-content">
+                        <h1>Metroid Dread</h1>
+                        <p>Uma nova aventura intensa com Samus Aran!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" onclick="openVideoModal('kirby')">
+                    <img src="images/kirby.jpg" alt="Kirby and the Forgotten Land">
+                    <div class="slide-content">
+                        <h1>Kirby and the Forgotten Land</h1>
+                        <p>Descubra um mundo misterioso com Kirby!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Modal de Vídeo -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideoModal()">&times;</span>
+            <iframe id="videoFrame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Seção de Produtos -->
+    <section id="Products" class="product-section">
+        <h2>Produtos</h2>
+        <div class="product-container">
+            <div class="product-card" onclick="openProductModal('Breath of the Wild', 'Explore o vasto mundo de Zelda!', 'R$ 419,99', 'images/products/zelda-breath-of-wild-product.png')">
+                <img src="images/The-Legend-of-Zelda-Breath-of-the-Wild.jpeg" alt="Zelda BOTW">
+                <h3>The Legend of Zelda: Breath of the Wild</h3>
+            </div>
+            <div class="product-card" onclick="openProductModal('Mario Odyssey', 'Explore novas aventuras com Mario!', 'R$ 299,99', 'images/products/mario-product.png')">
+                <img src="images/super_mario_odyssey_dinosaur_4k.jpeg" alt="Mario Odyssey">
+                <h3>Super Mario Odyssey</h3>
+            </div>
+            <div class="product-card" onclick="openProductModal('Donkey Kong Country', 'Aventure-se com Donkey Kong e sua turma!', 'R$ 358,90', 'images/products/donkey-kong-country-tropical-product.png')">
+                <img src="images/donkeyKong.jpg">
+                <h3>Donkey Kong Country: Tropical Freeze</h3>
+            </div>
+            <div class="product-card" onclick="openProductModal('Dragon Ball Z Kakarot', 'Reviva a história épica de Goku!', 'R$ 250,00', 'images/products/dragon-ball-z-product.png')">
+                <img src="images/dragonballZKakarot.jpg" alt="Dragon Ball Z Kakarot">
+                <h3>Dragon Ball Z: Kakarot</h3>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Modal de Produto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProductModal()">&times;</span>
+            <h2 id="productTitle"></h2>
+            <img id="productImage" src="" alt="">
+            <p id="productDescription"></p>
+            <p><strong>Preço:</strong> <span id="productPrice"></span></p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
