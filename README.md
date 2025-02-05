@@ -51,11 +51,15 @@ Os trailers são incorporados via YouTube e podem ser acessados ao clicar nos jo
 ## 📦 Como Rodar o Projeto Localmente
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seu-usuario/projeto-gaming-website.git
+   git clone https://github.com/MartinsGui/-praTI-Atividade6/tree/master
    ```
 2. Entre na pasta do projeto:
    ```sh
    cd ladingPage
    ```
 3. Abra o arquivo `index.html` no navegador:
-   usando o open with Live Server ou Alt+L+Alt+O
+   usando o open with Live Server ou
+   ```sh
+   Alt+L+Alt+O
+   ``
+   
