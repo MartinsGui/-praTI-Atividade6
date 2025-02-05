@@ -61,5 +61,5 @@ Os trailers são incorporados via YouTube e podem ser acessados ao clicar nos jo
    usando o open with Live Server ou
    ```sh
    Alt+L+Alt+O
-   ``
+   ```
    
