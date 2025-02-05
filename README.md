@@ -55,7 +55,7 @@ Os trailers são incorporados via YouTube e podem ser acessados ao clicar nos jo
    ```
 2. Entre na pasta do projeto:
    ```sh
-   cd projeto-gaming-website
+   cd ladingPage
    ```
 3. Abra o arquivo `index.html` no navegador:
    usando o open with Live Server ou Alt+L+Alt+O
